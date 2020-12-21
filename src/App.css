@@ -3,13 +3,13 @@
 /**********************************/
 body {
   color: #353535;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400;
   background: #f3f6ff;
 }
 
 a {
-  color: #FF6F61;
+  color: #ff6f61;
 }
 
 a:hover,
@@ -21,22 +21,21 @@ a:focus {
 }
 
 h1 {
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
   font-weight: 900;
 }
 
 h2 {
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
   font-weight: 700;
 }
 
-@media(min-width: 992px) {
+@media (min-width: 992px) {
   .container-fluid {
     padding-right: 60px;
     padding-left: 60px;
   }
 }
-
 
 /**********************************/
 /******** Back to Top CSS *********/
@@ -44,7 +43,7 @@ h2 {
 .back-to-top {
   position: fixed;
   display: none;
-  background: #FF6F61;
+  background: #ff6f61;
   color: #ffffff;
   width: 40px;
   height: 40px;
@@ -63,7 +62,6 @@ h2 {
   color: #ffffff;
 }
 
-
 /**********************************/
 /********* Form Input CSS *********/
 /**********************************/
@@ -74,13 +72,13 @@ h2 {
   padding: 0 15px;
   color: #999999;
   border: 1px solid #dddddd;
-  margin-bottom: 15px
+  margin-bottom: 15px;
 }
 
 .form-control:focus,
 .custom-select:focus {
   box-shadow: none;
-  border-color: #FF6F61;
+  border-color: #ff6f61;
 }
 
 .custom-radio,
@@ -94,28 +92,27 @@ h2 {
   border-color: #dddddd;
 }
 
-.custom-radio .custom-control-input:checked~.custom-control-label::before,
-.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+.custom-radio .custom-control-input:checked ~ .custom-control-label::before,
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
   color: #ffffff;
-  background: #FF6F61;
-  border-color: #FF6F61;
+  background: #ff6f61;
+  border-color: #ff6f61;
   box-shadow: none;
 }
 
 .btn {
-  color: #FF6F61;
+  color: #ff6f61;
   background: #ffffff;
-  border: 1px solid #FF6F61;
+  border: 1px solid #ff6f61;
 }
 
 .btn:hover,
 .btn:active,
 .btn:focus {
   color: #ffffff;
-  background: #FF6F61;
+  background: #ff6f61;
   box-shadow: none;
 }
-
 
 /**********************************/
 /******* Normal Slider CSS ********/
@@ -126,8 +123,8 @@ h2 {
   height: 40px;
   z-index: 1;
   opacity: 0;
-  transition: .5s;
-  background: rgba(255, 111, 97, .7);
+  transition: 0.5s;
+  background: rgba(255, 111, 97, 0.7);
   border-radius: 4px;
 }
 
@@ -153,14 +150,14 @@ h2 {
 .normal-slider .slick-prev:focus,
 .normal-slider .slick-next:hover,
 .normal-slider .slick-next:focus {
-  background: rgba(0, 0, 0, .7);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .normal-slider .slick-prev:hover::before,
 .normal-slider .slick-prev:focus::before,
 .normal-slider .slick-next:hover::before,
 .normal-slider .slick-next:focus::before {
-  color: #FF6F61;
+  color: #ff6f61;
 }
 
 .normal-slider .slick-prev::before,
@@ -189,13 +186,12 @@ h2 {
 }
 
 .normal-slider .slick-dots li.slick-active button:before {
-  color: #FF6F61;
+  color: #ff6f61;
 }
 
 .slick-dotted.slick-slider {
   margin-bottom: 0;
 }
-
 
 /**********************************/
 /********** Top Bar CSS ***********/
@@ -203,7 +199,7 @@ h2 {
 .top-bar {
   padding: 3px 0;
   font-size: 14px;
-  color: #FF6F61;
+  color: #ff6f61;
   background: #000000;
 }
 
@@ -221,7 +217,7 @@ h2 {
 
 @media (max-width: 575.98px) {
   .top-bar {
-    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .top-bar .col-sm-6:first-child,
@@ -229,7 +225,6 @@ h2 {
     text-align: center;
   }
 }
-
 
 /**********************************/
 /*********** Nav Bar CSS **********/
@@ -254,7 +249,7 @@ h2 {
   margin-top: 0;
   border: 0;
   border-radius: 0;
-  background: #FF6F61;
+  background: #ff6f61;
 }
 
 .nav .dropdown-menu a.active {
@@ -263,10 +258,9 @@ h2 {
 }
 
 @media (min-width: 768px) {
-
   .nav,
   .nav .navbar {
-    background: #FF6F61 !important;
+    background: #ff6f61 !important;
   }
 
   .nav .navbar-brand {
@@ -304,7 +298,6 @@ h2 {
   }
 }
 
-
 /**********************************/
 /********* Bottom Bar CSS *********/
 /**********************************/
@@ -327,12 +320,12 @@ h2 {
   width: 100%;
 }
 
-.bottom-bar .search input[type=text] {
+.bottom-bar .search input[type="text"] {
   width: 100%;
   height: 40px;
   padding: 0 15px;
   color: #666666;
-  border: 1px solid #FF6F61;
+  border: 1px solid #ff6f61;
   border-radius: 4px;
 }
 
@@ -345,12 +338,12 @@ h2 {
   padding: 0 15px;
   border: none;
   background: none;
-  color: #FF6F61;
+  color: #ff6f61;
   border-radius: 0 2px 2px 0;
 }
 
 .bottom-bar .search button:hover {
-  background: #FF6F61;
+  background: #ff6f61;
   color: #ffffff;
 }
 
@@ -365,12 +358,12 @@ h2 {
 
 .bottom-bar .user .cart i,
 .bottom-bar .user .wishlist i {
-  color: #FF6F61;
+  color: #ff6f61;
 }
 
 .bottom-bar .user .cart span,
 .bottom-bar .user .wishlist span {
-  color: #FF6F61;
+  color: #ff6f61;
   font-size: 15px;
 }
 
@@ -388,7 +381,6 @@ h2 {
 }
 
 @media (max-width: 767.98px) {
-
   .bottom-bar .logo,
   .bottom-bar .search,
   .bottom-bar .user {
@@ -400,7 +392,6 @@ h2 {
     margin-bottom: 0;
   }
 }
-
 
 /**********************************/
 /*********** Header CSS ***********/
@@ -441,12 +432,11 @@ h2 {
 }
 
 .header .navbar a:hover {
-  color: #FF6F61;
+  color: #ff6f61;
 }
 
-
 .header .navbar i {
-  color: #FF6F61;
+  color: #ff6f61;
   width: 20px;
   text-align: center;
   margin-right: 8px;
@@ -476,7 +466,7 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 111, 97, .7);
+  background: rgba(255, 111, 97, 0.7);
   transition: all 0.3s;
   z-index: 1;
 }
@@ -485,7 +475,7 @@ h2 {
   text-align: center;
   color: #ffffff;
   font-size: 22px;
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
   font-weight: 700;
 }
 
@@ -529,7 +519,7 @@ h2 {
   height: 100%;
   display: flex;
   align-items: center;
-  background: rgba(255, 111, 97, .7);
+  background: rgba(255, 111, 97, 0.7);
   transition: all 0.3s;
   opacity: 0;
 }
@@ -552,7 +542,6 @@ h2 {
   margin: 0;
 }
 
-
 /**********************************/
 /********* Breadcrumb CSS *********/
 /**********************************/
@@ -566,8 +555,6 @@ h2 {
   padding: 0;
   background: transparent;
 }
-
-
 
 /**********************************/
 /********** Category CSS **********/
@@ -619,7 +606,7 @@ h2 {
   height: 100%;
   display: flex;
   align-items: center;
-  background: rgba(255, 111, 97, .7);
+  background: rgba(255, 111, 97, 0.7);
   transition: all 0.3s;
   opacity: 0;
 }
@@ -642,7 +629,6 @@ h2 {
   margin: 0;
 }
 
-
 /**********************************/
 /*********** Feature CSS **********/
 /**********************************/
@@ -664,7 +650,7 @@ h2 {
 }
 
 .feature .feature-content i {
-  color: #FF6F61;
+  color: #ff6f61;
   font-size: 60px;
   margin-bottom: 30px;
 }
@@ -678,7 +664,6 @@ h2 {
   margin: 0;
 }
 
-
 /**********************************/
 /******** Product Item CSS ********/
 /**********************************/
@@ -690,11 +675,11 @@ h2 {
   padding: 15px;
   text-align: center;
   background: #000000;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .product-item:hover .product-title {
-  background: #FF6F61;
+  background: #ff6f61;
 }
 
 .product-item .product-title a,
@@ -711,7 +696,7 @@ h2 {
 
 .product-item .product-title .ratting i {
   font-size: 14px;
-  color: #FF6F61;
+  color: #ff6f61;
 }
 
 .product-item .product-content .price span {
@@ -738,12 +723,12 @@ h2 {
 .product-item .product-image a {
   display: block;
   background: #ffffff;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .product-item .product-image img {
   width: 100%;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .product-item:hover .product-image img {
@@ -759,8 +744,8 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 111, 97, .5);
-  transition: all .3s;
+  background: rgba(255, 111, 97, 0.5);
+  transition: all 0.3s;
   font-size: 0;
   z-index: 1;
   opacity: 0;
@@ -779,10 +764,10 @@ h2 {
   font-size: 16px;
   text-align: center;
   color: #ffffff;
-  background: #FF6F61;
+  background: #ff6f61;
   border: 1px solid #ffffff;
   border-radius: 4px;
-  transition: all .3s;
+  transition: all 0.3s;
   margin-top: 50px;
 }
 
@@ -795,19 +780,19 @@ h2 {
 }
 
 .product-item .product-image .product-action a:hover {
-  color: #FF6F61;
+  color: #ff6f61;
   background: #ffffff;
-  border: 1px solid #FF6F61;
+  border: 1px solid #ff6f61;
 }
 
 .product-item .product-price {
   padding: 20px;
   background: #000000;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .product-item:hover .product-price {
-  background: #FF6F61;
+  background: #ff6f61;
 }
 
 .product-item .product-price h3 {
@@ -824,19 +809,18 @@ h2 {
   float: right;
   border: none;
   color: #000000;
-  background: #FF6F61;
+  background: #ff6f61;
 }
 
 .product-item:hover .product-price .btn,
 .product-item .product-price .btn:hover {
-  color: #FF6F61;
+  color: #ff6f61;
   background: #ffffff;
 }
 
 .product-item .product-price .btn i {
   margin-right: 5px;
 }
-
 
 /**********************************/
 /******** Featured Product ********/
@@ -854,7 +838,7 @@ h2 {
 .product .section-header {
   margin-bottom: 30px;
   padding: 20px 30px 15px 30px;
-  color: #FF6F61;
+  color: #ff6f61;
   background: #ffffff;
 }
 
@@ -864,10 +848,10 @@ h2 {
   width: 30px;
   height: 30px;
   z-index: 1;
-  transition: .5s;
-  color: #FF6F61;
+  transition: 0.5s;
+  color: #ff6f61;
   background: #ffffff;
-  border: 1px solid #FF6F61;
+  border: 1px solid #ff6f61;
   border-radius: 4px;
 }
 
@@ -883,7 +867,7 @@ h2 {
 .product .slick-prev:focus,
 .product .slick-next:hover,
 .product .slick-next:focus {
-  background: #FF6F61;
+  background: #ff6f61;
 }
 
 .product .slick-prev::before,
@@ -891,7 +875,7 @@ h2 {
   font-family: "Font Awesome 5 Free";
   font-size: 18px;
   font-weight: 900;
-  color: #FF6F61;
+  color: #ff6f61;
 }
 
 .product .slick-prev::before {
@@ -908,7 +892,6 @@ h2 {
 .product .slick-next:focus::before {
   color: #ffffff;
 }
-
 
 /**********************************/
 /******** Product View CSS ********/
@@ -938,11 +921,11 @@ h2 {
   background: transparent;
   border: 1px solid #353535;
   border-radius: 4px;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .product-view .product-search input:focus {
-  border-color: #FF6F61;
+  border-color: #ff6f61;
 }
 
 .product-view .product-search button {
@@ -956,7 +939,7 @@ h2 {
   color: #353535;
   border: none;
   border-radius: 0 4px 4px 0;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .product-view .product-search button i {
@@ -964,7 +947,7 @@ h2 {
 }
 
 .product-view .product-search button:hover {
-  background: #FF6F61;
+  background: #ff6f61;
   color: #ffffff;
 }
 
@@ -986,13 +969,13 @@ h2 {
   text-align: left;
   border-radius: 4px;
   cursor: pointer;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .product-view .product-short .dropdown .dropdown-toggle:hover,
 .product-view .product-price-range .dropdown .dropdown-toggle:hover {
-  color: #FF6F61;
-  border-color: #FF6F61;
+  color: #ff6f61;
+  border-color: #ff6f61;
 }
 
 .product-view .product-short .dropdown .dropdown-toggle::after,
@@ -1023,7 +1006,7 @@ h2 {
 
 .product-view .pagination .page-item:hover .page-link,
 .product-view .pagination .page-item.active .page-link {
-  color: #FF6F61;
+  color: #ff6f61;
   background: #000000;
 }
 
@@ -1032,7 +1015,6 @@ h2 {
     margin-bottom: 30px;
   }
 }
-
 
 /**********************************/
 /******* Product Detail CSS *******/
@@ -1059,17 +1041,17 @@ h2 {
 
 .product-detail .product-slider-single-nav {
   margin: 15px 30px 30px 30px;
-  border: 3px double #FF6F61;
+  border: 3px double #ff6f61;
 }
 
 .product-detail .product-slider-single-nav .slider-nav-img {
-  border-right: 1px solid #FF6F61;
+  border-right: 1px solid #ff6f61;
   overflow: hidden;
 }
 
 .product-detail .product-slider-single-nav img {
   width: 100%;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .product-detail .product-slider-single-nav img:hover {
@@ -1107,7 +1089,7 @@ h2 {
 }
 
 .product-detail .product-content .ratting i {
-  color: #FF6F61;
+  color: #ff6f61;
   font-size: 16px;
 }
 
@@ -1131,7 +1113,7 @@ h2 {
 
 .product-detail .product-content .price p {
   display: inline-block;
-  color: #FF6F61;
+  color: #ff6f61;
   font-size: 30px;
   font-weight: 700;
   margin: 0;
@@ -1155,7 +1137,7 @@ h2 {
   font-size: 16px;
   text-align: center;
   color: #ffffff;
-  background: #FF6F61;
+  background: #ff6f61;
   border: none;
 }
 
@@ -1186,16 +1168,16 @@ h2 {
 }
 
 .product-detail .nav.nav-pills .nav-link {
-  color: #FF6F61;
+  color: #ff6f61;
   background: #000000;
   border-radius: 0;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .product-detail .nav.nav-pills .nav-link:hover,
 .product-detail .nav.nav-pills .nav-link.active {
   color: #000000;
-  background: #FF6F61;
+  background: #ff6f61;
 }
 
 .product-detail .tab-content {
@@ -1214,8 +1196,8 @@ h2 {
 }
 
 .product-detail .tab-content ul li::before {
-  content: '\f061';
-  font-family: 'Font Awesome 5 Free';
+  content: "\f061";
+  font-family: "Font Awesome 5 Free";
   font-weight: 900;
   padding-right: 5px;
 }
@@ -1226,7 +1208,7 @@ h2 {
 }
 
 .product-detail .tab-content .reviewer {
-  color: #FF6F61;
+  color: #ff6f61;
   font-size: 18px;
   font-weight: 600;
 }
@@ -1238,7 +1220,7 @@ h2 {
 }
 
 .product-detail .tab-content .ratting {
-  color: #FF6F61;
+  color: #ff6f61;
   margin-bottom: 15px;
 }
 
@@ -1270,19 +1252,18 @@ h2 {
   display: inline-block;
   height: 35px;
   padding: 0 15px;
-  color: #FF6F61;
+  color: #ff6f61;
   background: #ffffff;
-  border: 1px solid #FF6F61;
+  border: 1px solid #ff6f61;
   border-radius: 4px;
   margin-bottom: 15px;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .product-detail .tab-content .form button:hover {
   color: #ffffff;
-  background: #FF6F61;
+  background: #ff6f61;
 }
-
 
 /**********************************/
 /********** Sidebar CSS ***********/
@@ -1330,11 +1311,11 @@ h2 {
 }
 
 .sidebar-widget.category .navbar a:hover {
-  color: #FF6F61;
+  color: #ff6f61;
 }
 
 .sidebar-widget.category .navbar i {
-  color: #FF6F61;
+  color: #ff6f61;
   width: 20px;
   text-align: center;
   margin-right: 8px;
@@ -1363,23 +1344,23 @@ h2 {
   white-space: nowrap;
   display: inline-block;
   line-height: 23px;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .sidebar-widget.brands ul li a::before {
-  content: '\f105';
-  font-family: 'Font Awesome 5 Free';
+  content: "\f105";
+  font-family: "Font Awesome 5 Free";
   font-weight: 900;
   padding-right: 5px;
 }
 
 .sidebar-widget.brands ul li a:hover {
-  color: #FF6F61;
+  color: #ff6f61;
 }
 
 .sidebar-widget.brands ul li a:hover::before {
-  content: '\f101';
-  font-family: 'Font Awesome 5 Free';
+  content: "\f101";
+  font-family: "Font Awesome 5 Free";
   font-weight: 900;
 }
 
@@ -1407,7 +1388,7 @@ h2 {
 
 .sidebar-widget.image img {
   max-width: 100%;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .sidebar-widget.image img:hover {
@@ -1425,15 +1406,14 @@ h2 {
   background: #ffffff;
   border: 1px solid #353535;
   border-radius: 4px;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .sidebar-widget.tag a:hover {
   color: #ffffff;
-  background: #FF6F61;
-  border-color: #FF6F61;
+  background: #ff6f61;
+  border-color: #ff6f61;
 }
-
 
 /**********************************/
 /************ Cart CSS ************/
@@ -1456,7 +1436,7 @@ h2 {
 }
 
 .cart-page .table .thead-dark th {
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
   font-size: 18px;
   font-weight: 700;
   color: #353535;
@@ -1501,7 +1481,7 @@ h2 {
   font-size: 14px;
   text-align: center;
   color: #ffffff;
-  background: #FF6F61;
+  background: #ff6f61;
   border: none;
   border-radius: 4px;
 }
@@ -1545,11 +1525,11 @@ h2 {
   border: 1px solid #dddddd;
   border-radius: 4px;
   margin-right: 15px;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .cart-page .coupon input:focus {
-  border-color: #FF6F61;
+  border-color: #ff6f61;
 }
 
 .cart-page .coupon button {
@@ -1558,15 +1538,15 @@ h2 {
   padding: 2px 0;
   font-size: 16px;
   text-align: center;
-  color: #FF6F61;
+  color: #ff6f61;
   background: #ffffff;
-  border: 1px solid #FF6F61;
+  border: 1px solid #ff6f61;
   border-radius: 4px;
 }
 
 .cart-page .coupon button:hover {
   color: #ffffff;
-  background: #FF6F61;
+  background: #ff6f61;
 }
 
 .cart-page .cart-summary {
@@ -1604,28 +1584,27 @@ h2 {
   padding: 2px 10px;
   text-align: center;
   color: #ffffff;
-  background: #FF6F61;
+  background: #ff6f61;
   border: none;
   border-radius: 4px;
 }
 
 .cart-page .cart-summary .cart-btn button:hover {
-  color: #FF6F61;
+  color: #ff6f61;
   background: #000000;
 }
 
 .cart-page .cart-summary .cart-btn button:first-child {
   margin-right: 25px;
-  color: #FF6F61;
+  color: #ff6f61;
   background: #ffffff;
-  border: 1px solid #FF6F61;
+  border: 1px solid #ff6f61;
 }
 
 .cart-page .cart-summary .cart-btn button:first-child:hover {
   color: #ffffff;
-  background: #FF6F61;
+  background: #ff6f61;
 }
-
 
 /**********************************/
 /********** Wishlist CSS **********/
@@ -1647,7 +1626,7 @@ h2 {
 }
 
 .wishlist-page .table .thead-dark th {
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
   font-size: 18px;
   font-weight: 700;
   color: #353535;
@@ -1692,7 +1671,7 @@ h2 {
   font-size: 14px;
   text-align: center;
   color: #ffffff;
-  background: #FF6F61;
+  background: #ff6f61;
   border: none;
   border-radius: 4px;
 }
@@ -1718,7 +1697,6 @@ h2 {
   background: #000000;
   border: none;
 }
-
 
 /**********************************/
 /********** Checkout CSS **********/
@@ -1796,22 +1774,21 @@ h2 {
   width: 100%;
   height: 50px;
   padding: 2px 10px;
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
   font-weight: 700;
   font-size: 25px;
   text-align: center;
   color: #000000;
-  background: #FF6F61;
+  background: #ff6f61;
   border: none;
   border-radius: 4px;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .checkout .checkout-payment .checkout-btn button:hover {
-  color: #FF6F61;
+  color: #ff6f61;
   background: #000000;
 }
-
 
 /**********************************/
 /********* My Account CSS *********/
@@ -1827,7 +1804,7 @@ h2 {
   background: #ffffff;
   border-radius: 0;
   border-bottom: 1px solid #dddddd;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .my-account .nav.nav-pills .nav-link:last-child {
@@ -1837,7 +1814,7 @@ h2 {
 .my-account .nav.nav-pills .nav-link:hover,
 .my-account .nav.nav-pills .nav-link.active {
   color: #ffffff;
-  background: #FF6F61;
+  background: #ff6f61;
 }
 
 .my-account .nav.nav-pills .nav-link i {
@@ -1868,14 +1845,13 @@ h2 {
   vertical-align: middle;
 }
 
-
 /**********************************/
 /******* Call to Action CSS *******/
 /**********************************/
 .call-to-action {
   position: relative;
   padding: 30px 0;
-  background: #FF6F61;
+  background: #ff6f61;
 }
 
 .call-to-action .col-md-6:last-child {
@@ -1896,7 +1872,7 @@ h2 {
   color: #ffffff;
   font-size: 30px;
   letter-spacing: 2px;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .call-to-action a:hover {
@@ -1905,7 +1881,6 @@ h2 {
 }
 
 @media (max-width: 767.98px) {
-
   .call-to-action,
   .call-to-action .col-md-6:last-child {
     text-align: center;
@@ -1916,14 +1891,13 @@ h2 {
   }
 }
 
-
 /**********************************/
 /********* Newsletter CSS *********/
 /**********************************/
 .newsletter {
   position: relative;
   padding: 30px 0;
-  background: #FF6F61;
+  background: #ff6f61;
 }
 
 .newsletter h1 {
@@ -1955,14 +1929,14 @@ h2 {
   right: 0;
   padding: 0 15px;
   border: none;
-  background: #FF6F61;
+  background: #ff6f61;
   color: #ffffff;
   border: 1px solid #ffffff;
   border-radius: 0 4px 4px 0;
 }
 
 .newsletter .form button:hover {
-  color: #FF6F61;
+  color: #ff6f61;
   background: #000000;
 }
 
@@ -1979,7 +1953,6 @@ h2 {
     margin: 0 auto;
   }
 }
-
 
 /**********************************/
 /*********** Brand CSS ************/
@@ -2006,8 +1979,8 @@ h2 {
   height: 40px;
   z-index: 1;
   opacity: 0;
-  transition: .5s;
-  background: #FF6F61;
+  transition: 0.5s;
+  background: #ff6f61;
   border-radius: 4px;
 }
 
@@ -2040,7 +2013,7 @@ h2 {
 .brand .slick-prev:focus::before,
 .brand .slick-next:hover::before,
 .brand .slick-next:focus::before {
-  color: #FF6F61;
+  color: #ff6f61;
 }
 
 .brand .slick-prev::before,
@@ -2058,7 +2031,6 @@ h2 {
 .brand .slick-next::before {
   content: "\f105";
 }
-
 
 /**********************************/
 /*********** Review CSS ***********/
@@ -2117,7 +2089,7 @@ h2 {
 }
 
 .review .review-text .ratting i {
-  color: #FF6F61;
+  color: #ff6f61;
   font-size: 14px;
 }
 
@@ -2128,7 +2100,6 @@ h2 {
 .review .slick-slider:hover .slick-next {
   right: 30px;
 }
-
 
 /**********************************/
 /********** Contact CSS ***********/
@@ -2158,7 +2129,7 @@ h2 {
 
 .contact .contact-info h3 i {
   width: 20px;
-  color: #FF6F61;
+  color: #ff6f61;
   margin-right: 5px;
 }
 
@@ -2175,16 +2146,16 @@ h2 {
   padding: 5px 0;
   text-align: center;
   font-size: 18px;
-  border: 1px solid #FF6F61;
+  border: 1px solid #ff6f61;
   border-radius: 4px;
 }
 
 .contact .social a i {
-  color: #FF6F61;
+  color: #ff6f61;
 }
 
 .contact .social a:hover {
-  background: #FF6F61;
+  background: #ff6f61;
 }
 
 .contact .social a:hover i {
@@ -2195,7 +2166,6 @@ h2 {
   width: 100%;
   height: 450px;
 }
-
 
 /**********************************/
 /****** Register & Login CSS ******/
@@ -2211,7 +2181,6 @@ h2 {
   background: #ffffff;
   margin-bottom: 30px;
 }
-
 
 /**********************************/
 /********** Footer CSS ************/
@@ -2253,23 +2222,23 @@ h2 {
   white-space: nowrap;
   display: block;
   line-height: 23px;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .footer .footer-widget ul li a::before {
-  content: '\f105';
-  font-family: 'Font Awesome 5 Free';
+  content: "\f105";
+  font-family: "Font Awesome 5 Free";
   font-weight: 900;
   padding-right: 5px;
 }
 
 .footer .footer-widget ul li a:hover {
-  color: #FF6F61;
+  color: #ff6f61;
 }
 
 .footer .footer-widget ul li a:hover::before {
-  content: '\f101';
-  font-family: 'Font Awesome 5 Free';
+  content: "\f101";
+  font-family: "Font Awesome 5 Free";
   font-weight: 900;
 }
 
@@ -2298,18 +2267,18 @@ h2 {
   color: #353535;
   border: 1px solid #353535;
   border-radius: 4px;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .footer .social a:hover {
-  color: #FF6F61;
-  border-color: #FF6F61;
+  color: #ff6f61;
+  border-color: #ff6f61;
 }
 
 .footer .payment {
   padding-top: 25px;
   padding-bottom: 25px;
-  border-top: 1px solid rgba(0, 0, 0, .1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 @media (min-width: 992px) {
@@ -2357,7 +2326,6 @@ h2 {
   height: 25px;
 }
 
-
 /**********************************/
 /******** Footer Bottom CSS *******/
 /**********************************/
@@ -2393,9 +2361,162 @@ h2 {
 }
 
 @media (max-width: 768.98px) {
-
   .footer-bottom .copyright,
   .footer-bottom .template-by {
     text-align: center;
   }
+}
+
+.portfolio-page {
+  width: 400px;
+  margin: 0 auto;
+}
+.image-wrapper {
+  position: relative;
+  height: inherit;
+  overflow: hidden;
+}
+.relative {
+  position: relative;
+}
+.portfolio-image {
+  overflow: hidden;
+}
+.carousel-item-portfolio {
+  position: relative;
+  display: block;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  transition: -webkit-transform 0.6s ease;
+  transition: transform 0.6s ease;
+  transition: transform 0.6s ease, -webkit-transform 0.6s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+.image-wrapper .dexp-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.portfolio-image img {
+  -o-transform: scale(1);
+  -ms-transform: scale(1);
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition-duration: 0.7s;
+  transition-duration: 0.7s;
+  -ms-transition-duration: 0.7s;
+  -o-transition-duration: 0.7s;
+}
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  opacity: 0;
+}
+.overlay .overlay-inner {
+  position: relative;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  width: 100%;
+  text-align: center;
+}
+.overlay .overlay-inner > * {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+.overlay .overlay-inner a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.portfolio-content {
+  background-color: #f8fafc;
+  border-radius: 0 0 2px 2px;
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset;
+  margin-top: -4px;
+  padding: 20px 20px 15px;
+  text-align: left;
+}
+.portfolio-title {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  margin: 0;
+}
+.portfolio-title a {
+  color: #666;
+}
+.portfolio-description {
+  color: #ccc;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 19px;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.portfolio-page:hover .overlay {
+  opacity: 1;
+}
+.portfolio-page:hover .portfolio-image img {
+  -o-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  -moz-transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
+.portfolio-page:hover .portfolio-icon {
+  -webkit-transition: -webkit-transform 0.5s linear;
+  -moz-transition: -moz-transform 0.5s linear;
+  transition: transform 0.5s linear;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.portfolio-icon {
+  display: block;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  font-size: 17px;
+  height: 60px;
+  line-height: 60px;
+  width: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  -webkit-transform: rotate(180deg) scale(1) skew(0) translate(0);
+  -moz-transform: rotate(180deg) scale(1) skew(0) translate(0);
+  -o-transform: rotate(180deg) scale(1) skew(0) translate(0);
+  -ms-transform: rotate(180deg) scale(1) skew(0) translate(0);
+  transform: rotate(180deg) scale(1) skew(0) translate(0);
+  text-align: center;
 }
