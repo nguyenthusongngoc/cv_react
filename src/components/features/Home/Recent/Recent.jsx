@@ -1,8 +1,24 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
-import React from "react";
+import React, { useState } from "react";
+import { useEffect } from "react";
 import Slider from "react-slick";
-
+import ApiService, {
+  createParam,
+  endpoint,
+} from "../../../../core/service/api";
 const Recent = () => {
+  const [product, setProduct] = useState();
+  let query = {
+    limit: 5,
+  };
+  query = createParam(query);
+  useEffect(() => {
+    async function getProduct() {
+      const res = await ApiService(endpoint.products + query);
+      setProduct(res.data);
+    }
+    getProduct();
+  }, []);
   const settings = {
     autoplay: true,
     infinite: true,
@@ -46,201 +62,47 @@ const Recent = () => {
           {...settings}
           className="row align-items-center product-slider product-slider-4"
         >
-          <div>
-            <div className="product-item">
-              <div className="product-title">
-                <a href="/#">Product Name</a>
-                <div className="ratting">
-                  <i className="fa fa-star" />
-                  <i className="fa fa-star" />
-                  <i className="fa fa-star" />
-                  <i className="fa fa-star" />
-                  <i className="fa fa-star" />
+          {product &&
+            product.map((item, index) => (
+              <div className="product-item" key={index}>
+                <div className="product-title">
+                  <a href="/#">{item.title}</a>
+                  <div className="ratting">
+                    <i className="fa fa-star" />
+                    <i className="fa fa-star" />
+                    <i className="fa fa-star" />
+                    <i className="fa fa-star" />
+                    <i className="fa fa-star" />
+                  </div>
                 </div>
-              </div>
-              <div className="product-image">
-                <a href="product-detail.html">
-                  <img src="img/product-6.jpg" alt="Product Image" />
-                </a>
-                <div className="product-action">
-                  <a href="/#">
-                    <i className="fa fa-cart-plus" />
+                <div className="product-image">
+                  <a href="product-detail.html">
+                    <img src={item.image} alt="Product Image" />
                   </a>
-                  <a href="/#">
-                    <i className="fa fa-heart" />
-                  </a>
-                  <a href="/#">
-                    <i className="fa fa-search" />
-                  </a>
+                  <div className="product-action">
+                    <a href="/#">
+                      <i className="fa fa-cart-plus" />
+                    </a>
+                    <a href="/#">
+                      <i className="fa fa-heart" />
+                    </a>
+                    <a href="/#">
+                      <i className="fa fa-search" />
+                    </a>
+                  </div>
                 </div>
-              </div>
-              <div className="product-price">
-                <h3>
-                  <span>$</span>99
-                </h3>
-                <a className="btn" href>
-                  <i className="fa fa-shopping-cart" />
-                  Buy Now
-                </a>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="product-item">
-              <div className="product-title">
-                <a href="/#">Product Name</a>
-                <div className="ratting">
-                  <i className="fa fa-star" />
-                  <i className="fa fa-star" />
-                  <i className="fa fa-star" />
-                  <i className="fa fa-star" />
-                  <i className="fa fa-star" />
-                </div>
-              </div>
-              <div className="product-image">
-                <a href="product-detail.html">
-                  <img src="img/product-7.jpg" alt="Product Image" />
-                </a>
-                <div className="product-action">
-                  <a href="/#">
-                    <i className="fa fa-cart-plus" />
-                  </a>
-                  <a href="/#">
-                    <i className="fa fa-heart" />
-                  </a>
-                  <a href="/#">
-                    <i className="fa fa-search" />
+                <div className="product-price">
+                  <h3>
+                    <span>$</span>
+                    {item.price}
+                  </h3>
+                  <a className="btn" href>
+                    <i className="fa fa-shopping-cart" />
+                    Buy Now
                   </a>
                 </div>
               </div>
-              <div className="product-price">
-                <h3>
-                  <span>$</span>99
-                </h3>
-                <a className="btn" href>
-                  <i className="fa fa-shopping-cart" />
-                  Buy Now
-                </a>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="product-item">
-              <div className="product-title">
-                <a href="/#">Product Name</a>
-                <div className="ratting">
-                  <i className="fa fa-star" />
-                  <i className="fa fa-star" />
-                  <i className="fa fa-star" />
-                  <i className="fa fa-star" />
-                  <i className="fa fa-star" />
-                </div>
-              </div>
-              <div className="product-image">
-                <a href="product-detail.html">
-                  <img src="img/product-8.jpg" alt="Product Image" />
-                </a>
-                <div className="product-action">
-                  <a href="/#">
-                    <i className="fa fa-cart-plus" />
-                  </a>
-                  <a href="/#">
-                    <i className="fa fa-heart" />
-                  </a>
-                  <a href="/#">
-                    <i className="fa fa-search" />
-                  </a>
-                </div>
-              </div>
-              <div className="product-price">
-                <h3>
-                  <span>$</span>99
-                </h3>
-                <a className="btn" href>
-                  <i className="fa fa-shopping-cart" />
-                  Buy Now
-                </a>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="product-item">
-              <div className="product-title">
-                <a href="/#">Product Name</a>
-                <div className="ratting">
-                  <i className="fa fa-star" />
-                  <i className="fa fa-star" />
-                  <i className="fa fa-star" />
-                  <i className="fa fa-star" />
-                  <i className="fa fa-star" />
-                </div>
-              </div>
-              <div className="product-image">
-                <a href="product-detail.html">
-                  <img src="img/product-9.jpg" alt="Product Image" />
-                </a>
-                <div className="product-action">
-                  <a href="/#">
-                    <i className="fa fa-cart-plus" />
-                  </a>
-                  <a href="/#">
-                    <i className="fa fa-heart" />
-                  </a>
-                  <a href="/#">
-                    <i className="fa fa-search" />
-                  </a>
-                </div>
-              </div>
-              <div className="product-price">
-                <h3>
-                  <span>$</span>99
-                </h3>
-                <a className="btn" href>
-                  <i className="fa fa-shopping-cart" />
-                  Buy Now
-                </a>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="product-item">
-              <div className="product-title">
-                <a href="/#">Product Name</a>
-                <div className="ratting">
-                  <i className="fa fa-star" />
-                  <i className="fa fa-star" />
-                  <i className="fa fa-star" />
-                  <i className="fa fa-star" />
-                  <i className="fa fa-star" />
-                </div>
-              </div>
-              <div className="product-image">
-                <a href="product-detail.html">
-                  <img src="img/product-10.jpg" alt="Product Image" />
-                </a>
-                <div className="product-action">
-                  <a href="/#">
-                    <i className="fa fa-cart-plus" />
-                  </a>
-                  <a href="/#">
-                    <i className="fa fa-heart" />
-                  </a>
-                  <a href="/#">
-                    <i className="fa fa-search" />
-                  </a>
-                </div>
-              </div>
-              <div className="product-price">
-                <h3>
-                  <span>$</span>99
-                </h3>
-                <a className="btn" href>
-                  <i className="fa fa-shopping-cart" />
-                  Buy Now
-                </a>
-              </div>
-            </div>
-          </div>
+            ))}
         </Slider>
       </div>
     </div>

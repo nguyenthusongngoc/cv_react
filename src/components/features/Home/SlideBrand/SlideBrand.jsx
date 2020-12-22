@@ -1,12 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 
 const SlideBrand = () => {
+  const [brand, setBrand] = useState([
+    {
+      img: "img/brand-1.png",
+    },
+    {
+      img: "img/brand-2.png",
+    },
+    {
+      img: "img/brand-3.png",
+    },
+    {
+      img: "img/brand-4.png",
+    },
+    {
+      img: "img/brand-5.png",
+    },
+    {
+      img: "img/brand-6.png",
+    },
+  ]);
   const settings = {
     speed: 5000,
     autoplay: true,
     autoplaySpeed: 0,
-    cssEase: 'linear',
+    cssEase: "linear",
     slidesToShow: 5,
     slidesToScroll: 1,
     infinite: true,
@@ -19,24 +39,11 @@ const SlideBrand = () => {
     <div className="brand">
       <div className="container-fluid">
         <Slider {...settings} className="brand-slider">
-          <div className="brand-item">
-            <img src="img/brand-1.png" alt="" />
-          </div>
-          <div className="brand-item">
-            <img src="img/brand-2.png" alt="" />
-          </div>
-          <div className="brand-item">
-            <img src="img/brand-3.png" alt="" />
-          </div>
-          <div className="brand-item">
-            <img src="img/brand-4.png" alt="" />
-          </div>
-          <div className="brand-item">
-            <img src="img/brand-5.png" alt="" />
-          </div>
-          <div className="brand-item">
-            <img src="img/brand-6.png" alt="" />
-          </div>
+          {brand.map((item, index) => (
+            <div className="brand-item" key={index}>
+              <img src={item.img} alt="" />
+            </div>
+          ))}
         </Slider>
       </div>
     </div>
