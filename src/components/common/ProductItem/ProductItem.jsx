@@ -1,7 +1,15 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React from "react";
-
+import { useDispatch } from "react-redux";
+import { addCart } from "../../../redux/cartReducer";
 const ProductItem = (props) => {
+  const dispatch = useDispatch();
+
+  const addToCart = (item) => {
+    const action = addCart(item);
+    dispatch(action)
+  };
+
   const { product } = props;
   return (
     <div>
@@ -37,10 +45,15 @@ const ProductItem = (props) => {
             <span>$</span>
             {product.price}
           </h3>
-          <a className="btn" href>
+          <button
+            className="btn"
+            onClick={() => {
+              addToCart(product);
+            }}
+          >
             <i className="fa fa-shopping-cart" />
             Buy Now
-          </a>
+          </button>
         </div>
       </div>
     </div>
