@@ -42,43 +42,6 @@ const Home = () => {
       </div>
       <Recent />
       <Review />
-      <div className="portfolio-page">
-        <div className="image-wrapper">
-          <div className="portfolio-image dexp-image relative">
-            <div className="carousel-item-portfolio">
-              <img
-                src="https://demo.drupalexp.com/8/evolve/sites/default/files/styles/image_800x600_/public/2016-11/portfolio-04a.jpg?itok=f4v-oxMQ"
-                width={800}
-                height={600}
-                alt=""
-              />
-            </div>
-          </div>
-          <div className="overlay">
-            <div className="overlay-inner">
-              <div>
-                <a
-                  className="colorbox"
-                  href="https://demo.drupalexp.com/8/evolve/sites/default/files/2016-11/portfolio-04a.jpg"
-                  title="Perpetua incorrupte"
-                >
-                  <i className=" portfolio-icon fa fa-search" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="portfolio-content">
-          <h5 className="portfolio-title">
-            <a href="/#" hrefLang="en">
-              Perpetua incorrupte
-            </a>
-          </h5>
-          <div className="portfolio-description">
-            <p>Ganti6 perspiciatis unde omnis iste</p>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };

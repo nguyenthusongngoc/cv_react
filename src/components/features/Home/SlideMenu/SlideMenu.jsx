@@ -1,8 +1,22 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 
 const SlideMenu = () => {
+  const [items, setItems] = useState([
+    {
+      caption: "Some text goes here that describes the image",
+      img: "img/slider-1.jpg",
+    },
+    {
+      caption: "Some text goes here that describes the image",
+      img: "img/slider-2.jpg",
+    },
+    {
+      caption: "Some text goes here that describes the image",
+      img: "img/slider-3.jpg",
+    },
+  ]);
   const settings = {
     autoplay: true,
     dots: true,
@@ -71,36 +85,18 @@ const SlideMenu = () => {
           </div>
           <div className="col-md-6">
             <Slider {...settings} className="header-slider normal-slider">
-              <div className="header-slider-item">
-                <img src="img/slider-1.jpg" alt="Slider Image" />
-                <div className="header-slider-caption">
-                  <p>Some text goes here that describes the image</p>
-                  <a className="btn" href>
-                    <i className="fa fa-shopping-cart" />
-                    Shop Now
-                  </a>
+              {items.map((item,index) => (
+                <div className="header-slider-item" key={index}>
+                  <img src={item.img}alt="Slider Image" />
+                  <div className="header-slider-caption">
+                    <p>{item.caption}</p>
+                    <a className="btn" href>
+                      <i className="fa fa-shopping-cart" />
+                      Shop Now
+                    </a>
+                  </div>
                 </div>
-              </div>
-              <div className="header-slider-item">
-                <img src="img/slider-2.jpg" alt="Slider Image" />
-                <div className="header-slider-caption">
-                  <p>Some text goes here that describes the image</p>
-                  <a className="btn" href>
-                    <i className="fa fa-shopping-cart" />
-                    Shop Now
-                  </a>
-                </div>
-              </div>
-              <div className="header-slider-item">
-                <img src="img/slider-3.jpg" alt="Slider Image" />
-                <div className="header-slider-caption">
-                  <p>Some text goes here that describes the image</p>
-                  <a className="btn" href>
-                    <i className="fa fa-shopping-cart" />
-                    Shop Now
-                  </a>
-                </div>
-              </div>
+              ))}
             </Slider>
           </div>
           <div className="col-md-3">
