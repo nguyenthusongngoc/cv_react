@@ -6,8 +6,10 @@ const ProductItem = (props) => {
   const dispatch = useDispatch();
 
   const addToCart = (item) => {
-    const action = addCart(item);
-    dispatch(action)
+    const quantity = item.quantity ? item.quantity : 1;
+    const newItem = { ...item, quantity: quantity };
+    const action = addCart(newItem);
+    dispatch(action);
   };
 
   const { product } = props;
