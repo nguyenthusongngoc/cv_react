@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 
 const SlideMenu = () => {
-  const [items, setItems] = useState([
+  const [items] = useState([
     {
       caption: "Some text goes here that describes the image",
       img: "img/slider-1.jpg",

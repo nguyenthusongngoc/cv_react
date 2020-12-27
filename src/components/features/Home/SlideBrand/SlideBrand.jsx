@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 
 const SlideBrand = () => {
-  const [brand, setBrand] = useState([
+  const [brand] = useState([
     {
       img: "img/brand-1.png",
     },

@@ -1,38 +1,47 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const counterSlice = createSlice({
-  name: "counter",
-  initialState: [],
+const cartSlice = createSlice({
+  name: "cart",
+  initialState: [{ id: 1, title: "ngoc", price: 20, quantity: 1 }],
   reducers: {
     addCart(state, action) {
-      // if(state.findIndex(action.payload))
-      console.log(state);
-      state.push(action.payload);
-      findIndex(state,action.payload);
+      const index = state.findIndex((item) => {
+        return item.id === action.payload.id;
+      });
+      if (index === -1) {
+        state.push(action.payload);
+      } else {
+        state[index].quantity++;
+      }
     },
     delCart(state, action) {
-      state.value--;
+      return state.filter((item) => item.id !== action.payload.id);
     },
-    removeCart(state, action) {
-      state.value += action.payload;
+    clearCart(state) {
+      state.length = 0;
+    },
+    plusQty(state, action) {
+      const index = state.findIndex((item) => {
+        return item.id === action.payload.id;
+      });
+      state[index].quantity++;
+    },
+    minusQty(state, action) {
+      const index = state.findIndex((item) => {
+        return item.id === action.payload.id;
+      });
+      if (state[index].quantity >= 1) {
+        state.quantity--;
+      }
     },
   },
 });
 
-const findIndex = (arr, obj) => {
-  console.log(arr);
-  console.log(obj);
-  let index = -1;
-  if (arr.length > 0) {
-    for (let i = 0; i < arr.length; i++) {
-      // if (arr[i].product.id === obj.id) {
-      //   index = i;
-      //   break;
-      // }
-    }
-  }
-  // return index;
-};
-
-export const { addCart, delCart, removeCart } = counterSlice.actions;
-export default counterSlice.reducer;
+export const {
+  addCart,
+  delCart,
+  clearCart,
+  plusQty,
+  minusQty,
+} = cartSlice.actions;
+export default cartSlice.reducer;
