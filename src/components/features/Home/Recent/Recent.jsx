@@ -14,11 +14,17 @@ const Recent = () => {
   };
   query = createParam(query);
   useEffect(() => {
+    let isSubscribed = true;
     async function getProduct() {
       const res = await ApiService(endpoint.products + query);
-      setProduct(res.data);
+      if (isSubscribed) {
+        setProduct(res.data);
+      }
     }
     getProduct();
+    return () => (
+      isSubscribed = false
+    )
   }, []);
   const settings = {
     autoplay: true,
