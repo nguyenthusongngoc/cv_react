@@ -12,16 +12,10 @@ export default function Routing() {
     <Router>
       <Header />
       <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/cart">
-          <Cart />
-        </Route>
-      
+        <Route exact path="/" component={Home} />
+        <Route path="/cart" component={Cart} />
         <Route path="/login" component={Login} />
         <Route path="" component={Notfound} />
-
       </Switch>
       <Footer />
     </Router>
