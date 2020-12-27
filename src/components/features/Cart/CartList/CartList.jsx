@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 const CartList = (props) => {
   const { cartList, onDelCart, onPlusQty, onMinusQty } = props;
+
   return (
     <tbody className="align-middle">
       {!cartList.length > 0 && (
@@ -30,7 +31,7 @@ const CartList = (props) => {
               <button className="btn-minus" onClick={() => onMinusQty(item)}>
                 <i className="fa fa-minus" />
               </button>
-              <input type="text" defaultValue={item.quantity} />
+              <input type="text" value={item.quantity} defaultValue={1} />
               <button className="btn-plus" onClick={() => onPlusQty(item)}>
                 <i className="fa fa-plus" />
               </button>

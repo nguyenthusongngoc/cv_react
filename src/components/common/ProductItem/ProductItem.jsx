@@ -32,9 +32,6 @@ const ProductItem = (props) => {
           </a>
           <div className="product-action">
             <a href="/#">
-              <i className="fa fa-cart-plus" />
-            </a>
-            <a href="/#">
               <i className="fa fa-heart" />
             </a>
             <a href="/#">

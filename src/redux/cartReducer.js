@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const cartSlice = createSlice({
   name: "cart",
-  initialState: [{ id: 1, title: "ngoc", price: 20, quantity: 1 }],
+  initialState: [],
   reducers: {
     addCart(state, action) {
       const index = state.findIndex((item) => {
@@ -31,7 +31,7 @@ const cartSlice = createSlice({
         return item.id === action.payload.id;
       });
       if (state[index].quantity >= 1) {
-        state.quantity--;
+        state[index].quantity--;
       }
     },
   },
