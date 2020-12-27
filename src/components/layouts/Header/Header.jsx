@@ -23,7 +23,7 @@ const Header = () => {
                   <Link to="/#" className="nav-link dropdown-toggle" data-toggle="dropdown">More Pages</Link>
                   <div className="dropdown-menu">
                     <Link to="/#" className="dropdown-item">Wishlist</Link>
-                    <Link to="/#" className="dropdown-item">Login &amp; Register</Link>
+                    <Link to="/login" className="dropdown-item">Login &amp; Register</Link>
                     <Link to="/#" className="dropdown-item">Contact Us</Link>
                   </div>
                 </div>
