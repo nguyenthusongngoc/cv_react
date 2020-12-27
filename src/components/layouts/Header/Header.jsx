@@ -1,7 +1,10 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
+  const cartList = useSelector(state => state.cart);
+
   return (
     <header>
       <div className="nav">
@@ -32,8 +35,8 @@ const Header = () => {
                 <div className="nav-item dropdown">
                   <Link to="/#" className="nav-link dropdown-toggle" data-toggle="dropdown">User Account</Link>
                   <div className="dropdown-menu">
-                    <Link to="/#" className="dropdown-item">Login</Link>
-                    <Link to="/#" className="dropdown-item">Register</Link>
+                    <Link to="/login" className="dropdown-item">Login</Link>
+                    <Link to="/login" className="dropdown-item">Register</Link>
                   </div>
                 </div>
               </div>
@@ -59,14 +62,14 @@ const Header = () => {
             </div>
             <div className="col-md-3">
               <div className="user">
-                <button href="wishlist.html" className="btn wishlist">
+                <Link to="/cart" className="btn wishlist">
                   <i className="fa fa-heart" />
                   <span>(0)</span>
-                </button>
-                <button href="cart.html" className="btn cart">
+                </Link>
+                <Link to="/cart" className="btn cart">
                   <i className="fa fa-shopping-cart" />
-                  <span>(0)</span>
-                </button>
+                  <span>({cartList.length})</span>
+                </Link>
               </div>
             </div>
           </div>

@@ -1,11 +1,11 @@
 import React from 'react';
 
-
 const Login = (props) => (
-  <div className="login">
+  <main className="login">
     <div className="container-fluid">
       <div className="row">
         <div className="col-lg-6">
+          <h2>Register</h2>
           <div className="register-form">
             <div className="row">
               <div className="col-md-6">
@@ -39,6 +39,7 @@ const Login = (props) => (
           </div>
         </div>
         <div className="col-lg-6">
+          <h2>Login</h2>
           <div className="login-form">
             <div className="row">
               <div className="col-md-6">
@@ -63,7 +64,7 @@ const Login = (props) => (
         </div>
       </div>
     </div>
-  </div>
+  </main>
 
 );
 

@@ -8,7 +8,7 @@ import Review from "./Review/Review";
 
 const Home = () => {
   return (
-    <div>
+    <main>
       <SlideMenu />
       <SlideBrand />
       <Feature />
@@ -42,7 +42,7 @@ const Home = () => {
       </div>
       <Recent />
       <Review />
-    </div>
+    </main>
   );
 };
 

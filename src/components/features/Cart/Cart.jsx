@@ -32,13 +32,14 @@ const Cart = () => {
     const action = minusQty(item);
     dispatch(action);
   };
-  // const getCost = () => {
-  //   for (let i = 0; i < cartItem.length; i++) {
-  //     console.log(cartItem[i]);
-  //   }
-  // };
+
+  const HandlePay = (item) => {
+    const action = minusQty(item);
+    dispatch(action);
+  };
+
   return (
-    <div className="cart-page">
+    <main className="cart-page">
       <div className="container-fluid">
         <div className="row">
           <div className="col-lg-8">
@@ -64,10 +65,10 @@ const Cart = () => {
               </div>
             </div>
           </div>
-          <CartAside onClearCart={handleClearCart} />
+          <CartAside onClearCart={handleClearCart} cartList={cartList} onPay={HandlePay} />
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

@@ -34,6 +34,9 @@ const cartSlice = createSlice({
         state[index].quantity--;
       }
     },
+    payCart(state,action) {
+      
+    }
   },
 });
 
@@ -43,5 +46,6 @@ export const {
   clearCart,
   plusQty,
   minusQty,
+  payCart
 } = cartSlice.actions;
 export default cartSlice.reducer;
