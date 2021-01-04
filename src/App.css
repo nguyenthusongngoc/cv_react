@@ -8,7 +8,7 @@ body {
   background: #f3f6ff;
 }
 
-a {
+main a {
   color: #ff6f61;
 }
 
@@ -96,8 +96,8 @@ main {
   border-color: #dddddd;
 }
 
-.custom-radio .custom-control-input:checked~.custom-control-label::before,
-.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+.custom-radio .custom-control-input:checked ~ .custom-control-label::before,
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
   color: #ffffff;
   background: #ff6f61;
   border-color: #ff6f61;
@@ -262,10 +262,9 @@ main .btn {
 }
 
 @media (min-width: 768px) {
-
   .nav,
   .nav .navbar {
-    background: #ff6f61 !important;
+    background: #ff6f61;
   }
 
   .nav .navbar-brand {
@@ -386,7 +385,6 @@ main .btn {
 }
 
 @media (max-width: 767.98px) {
-
   .bottom-bar .logo,
   .bottom-bar .search,
   .bottom-bar .user {
@@ -1897,7 +1895,6 @@ main .btn {
 }
 
 @media (max-width: 767.98px) {
-
   .call-to-action,
   .call-to-action .col-md-6:last-child {
     text-align: center;
@@ -2378,7 +2375,6 @@ main .btn {
 }
 
 @media (max-width: 768.98px) {
-
   .footer-bottom .copyright,
   .footer-bottom .template-by {
     text-align: center;
@@ -2468,7 +2464,7 @@ main .btn {
   text-align: center;
 }
 
-.overlay .overlay-inner>* {
+.overlay .overlay-inner > * {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -2566,4 +2562,8 @@ p {
   display: block;
   margin: auto;
   height: 35vh;
+}
+
+.nav.nav-tabs {
+  background-color: #ffffff;
 }

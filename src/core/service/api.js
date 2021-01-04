@@ -2,7 +2,7 @@ import axios from "axios";
 import queryString from "query-string";
 import { domain } from "../../constant/domain";
 export const endpoint = {
-  user: "user",
+  user: "users",
   products: "products",
   cart: "cart",
 };

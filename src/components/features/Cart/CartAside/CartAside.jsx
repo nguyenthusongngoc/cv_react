@@ -6,24 +6,28 @@ const CartAside = (props) => {
   const [total, setTotal] = useState();
   const [shippingCost, setShippingCost] = useState(15);
   const handleChangeCode = (e) => {
-    const voucher = 'ngocdeptrai';
-    let result = e.target.value.replace(/\s+/g, '').toLowerCase()
+    const voucher = "ngocdeptrai";
+    let result = e.target.value.replace(/\s+/g, "").toLowerCase();
     result === voucher ? setShippingCost(0) : setShippingCost(15);
-  }
+  };
   useEffect(() => {
     let cost = 0;
-    cartList.forEach(item => {
+    cartList.forEach((item) => {
       cost += Math.ceil(item.price * item.quantity * 10) / 10;
-    })
+    });
     setTotal(cost);
-  }, [cartList])
+  }, [cartList]);
   return (
     <div className="col-lg-4">
       <div className="cart-page-inner">
         <div className="row">
           <div className="col-md-12">
             <div className="coupon">
-              <input type="text" placeholder="Coupon Code" onChange={(e) => handleChangeCode(e)} />
+              <input
+                type="text"
+                placeholder="Coupon Code"
+                onChange={(e) => handleChangeCode(e)}
+              />
               <button>Apply Code</button>
             </div>
           </div>

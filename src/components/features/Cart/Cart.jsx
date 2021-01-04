@@ -33,11 +33,6 @@ const Cart = () => {
     dispatch(action);
   };
 
-  const HandlePay = (item) => {
-    const action = minusQty(item);
-    dispatch(action);
-  };
-
   return (
     <main className="cart-page">
       <div className="container-fluid">
@@ -65,7 +60,10 @@ const Cart = () => {
               </div>
             </div>
           </div>
-          <CartAside onClearCart={handleClearCart} cartList={cartList} onPay={HandlePay} />
+          <CartAside
+            onClearCart={handleClearCart}
+            cartList={cartList}
+          />
         </div>
       </div>
     </main>
