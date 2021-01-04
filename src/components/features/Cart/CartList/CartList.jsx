@@ -1,13 +1,14 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
-import React, { } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 const CartList = (props) => {
   const { cartList, onDelCart, onPlusQty, onMinusQty } = props;
   const handleChange = (e, id) => {
-
-    const result = e.target.value;
-  }
+    if (e.target.value) {
+      console.log(e.target.value);
+    }
+  };
   return (
     <tbody className="align-middle">
       {!cartList.length > 0 && (
@@ -31,10 +32,18 @@ const CartList = (props) => {
           <td>${item.price}</td>
           <td>
             <div className="qty">
-              <button className="btn-minus" onClick={() => onMinusQty(item)} disabled={item.quantity <= 0}>
+              <button
+                className="btn-minus"
+                onClick={() => onMinusQty(item)}
+                disabled={item.quantity <= 0}
+              >
                 <i className="fa fa-minus" />
               </button>
-              <input type="text" value={item.quantity} onChange={e => handleChange(e, item.id)} />
+              <input
+                type="text"
+                value={item.quantity}
+                onChange={(e) => handleChange(e, item.id)}
+              />
               <button className="btn-plus" onClick={() => onPlusQty(item)}>
                 <i className="fa fa-plus" />
               </button>

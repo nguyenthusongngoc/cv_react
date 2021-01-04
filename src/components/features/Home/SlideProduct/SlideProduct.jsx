@@ -21,12 +21,11 @@ const SlideProduct = () => {
       if (isSubscribed) {
         setProduct(res.data);
       }
+      console.log(res);
     }
     getProduct();
-    return () => (
-      isSubscribed = false
-    )
-  }, []);
+    return () => (isSubscribed = false);
+  },[]);
   const settings = {
     autoplay: true,
     infinite: true,
