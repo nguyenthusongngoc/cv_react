@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { useState } from "react";
 import Slider from "react-slick";
+import Loading from "../../../layouts/Loading/Loading";
 
 const SlideMenu = () => {
   const [items] = useState([
@@ -85,18 +86,22 @@ const SlideMenu = () => {
           </div>
           <div className="col-md-6">
             <Slider {...settings} className="header-slider normal-slider">
-              {items.map((item,index) => (
-                <div className="header-slider-item" key={index}>
-                  <img src={item.img}alt="Slider Image" />
-                  <div className="header-slider-caption">
-                    <p>{item.caption}</p>
-                    <a className="btn" href>
-                      <i className="fa fa-shopping-cart" />
-                      Shop Now
-                    </a>
+              {items ? (
+                items.map((item, index) => (
+                  <div className="header-slider-item" key={index}>
+                    <img src={item.img} alt="Slider Image" />
+                    <div className="header-slider-caption">
+                      <p>{item.caption}</p>
+                      <a className="btn" href>
+                        <i className="fa fa-shopping-cart" />
+                        Shop Now
+                      </a>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))
+              ) : (
+                <Loading />
+              )}
             </Slider>
           </div>
           <div className="col-md-3">

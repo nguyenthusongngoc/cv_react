@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React from "react";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import { addCart } from "../../../redux/cartReducer";
 const ProductItem = (props) => {
   const dispatch = useDispatch();
@@ -34,9 +35,9 @@ const ProductItem = (props) => {
             <a href="/#">
               <i className="fa fa-heart" />
             </a>
-            <a href="/#">
+            <Link to={"/detail/" + product.id}>
               <i className="fa fa-search" />
-            </a>
+            </Link>
           </div>
         </div>
         <div className="product-price">

@@ -2567,3 +2567,7 @@ p {
 .nav.nav-tabs {
   background-color: #ffffff;
 }
+
+.w_100 {
+  width: 100%;
+}

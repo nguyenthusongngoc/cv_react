@@ -6,7 +6,7 @@ const User = () => {
   let history = useHistory();
   let auth = useAuth();
   return auth.user ? (
-    <main>
+    <main className="text-center">
       Welcome!
       <button
         onClick={() => {

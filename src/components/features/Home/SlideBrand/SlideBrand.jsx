@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
+import Loading from "../../../layouts/Loading/Loading";
 
 const SlideBrand = () => {
   const [brand] = useState([
@@ -39,11 +40,15 @@ const SlideBrand = () => {
     <div className="brand">
       <div className="container-fluid">
         <Slider {...settings} className="brand-slider">
-          {brand.map((item, index) => (
-            <div className="brand-item" key={index}>
-              <img src={item.img} alt="" />
-            </div>
-          ))}
+          {brand ? (
+            brand.map((item, index) => (
+              <div className="brand-item" key={index}>
+                <img src={item.img} alt="" />
+              </div>
+            ))
+          ) : (
+            <Loading />
+          )}
         </Slider>
       </div>
     </div>
