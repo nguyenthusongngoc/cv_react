@@ -8,6 +8,7 @@ import ApiService, {
   endpoint,
 } from "../../../../core/service/api";
 import ProductItem from "../../../common/ProductItem/ProductItem";
+import Loading from "../../../layouts/Loading/Loading";
 const SlideProduct = () => {
   const [product, setProduct] = useState();
   let query = {
@@ -21,11 +22,10 @@ const SlideProduct = () => {
       if (isSubscribed) {
         setProduct(res.data);
       }
-      console.log(res);
     }
     getProduct();
     return () => (isSubscribed = false);
-  },[]);
+  }, []);
   const settings = {
     autoplay: true,
     infinite: true,
@@ -69,10 +69,14 @@ const SlideProduct = () => {
           {...settings}
           className="row align-items-center product-slider product-slider-4"
         >
-          {product &&
+          {product ? (
+            product &&
             product.map((item, index) => (
               <ProductItem product={item} key={index} />
-            ))}
+            ))
+          ) : (
+            <Loading />
+          )}
         </Slider>
       </div>
     </div>

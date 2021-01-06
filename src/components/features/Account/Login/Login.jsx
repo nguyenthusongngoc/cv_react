@@ -8,14 +8,14 @@ const Login = (props) => {
   let location = useLocation();
   let auth = useAuth();
   let { from } = location.state || { from: { pathname: "/user" } };
-  const [userName, setUserName] = useState("");
-  const [password, setPassWord] = useState("");
-  const [listUser, setListUser] = useState(null);
   let login = (data) => {
     auth.signin(() => {
       history.replace(from);
     });
   };
+  const [userName, setUserName] = useState("");
+  const [password, setPassWord] = useState("");
+  const [listUser, setListUser] = useState(null);
   useEffect(() => {
     async function getApiUser() {
       const res = await ApiService(endpoint.user);
@@ -39,7 +39,10 @@ const Login = (props) => {
     if (findUser) {
       if (findUser.password === password) {
         login(findUser);
+      } else {
+        
       }
+    } else {
     }
   };
 
