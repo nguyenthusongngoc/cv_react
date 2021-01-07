@@ -40,7 +40,6 @@ const Login = (props) => {
       if (findUser.password === password) {
         login(findUser);
       } else {
-        
       }
     } else {
     }

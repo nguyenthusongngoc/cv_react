@@ -1,24 +1,14 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React from "react";
-import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { addCart } from "../../../redux/cartReducer";
+import AddCart from "../AddCart/AddCart";
 const ProductItem = (props) => {
-  const dispatch = useDispatch();
-
-  const addToCart = (item) => {
-    const quantity = item.quantity ? item.quantity : 1;
-    const newItem = { ...item, quantity: quantity };
-    const action = addCart(newItem);
-    dispatch(action);
-  };
-
   const { product } = props;
   return (
     <div>
       <div className="product-item">
         <div className="product-title">
-          <a href="/#">{product.title}</a>
+          <Link to={"/detail/" + product.id}>{product.title}</Link>
           <div className="ratting">
             <i className="fa fa-star" />
             <i className="fa fa-star" />
@@ -45,15 +35,7 @@ const ProductItem = (props) => {
             <span>$</span>
             {product.price}
           </h3>
-          <button
-            className="btn"
-            onClick={() => {
-              addToCart(product);
-            }}
-          >
-            <i className="fa fa-shopping-cart" />
-            Buy Now
-          </button>
+          <AddCart product={product} />
         </div>
       </div>
     </div>

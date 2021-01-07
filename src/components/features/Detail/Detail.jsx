@@ -1,47 +1,39 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { useHistory, useParams } from "react-router-dom";
 import ApiService, { endpoint } from "../../../core/service/api";
-import { addCart } from "../../../redux/cartReducer";
+import AddCart from "../../common/AddCart/AddCart";
 import Loading from "../../layouts/Loading/Loading";
 
 const Detail = () => {
-  const dispatch = useDispatch();
   const history = useHistory();
-  const addToCart = (item) => {
-    const quantity = item.quantity ? item.quantity : 1;
-    const newItem = { ...item, quantity: quantity };
-    const action = addCart(newItem);
-    dispatch(action);
-  };
+  const cart = useSelector((state) => state.cart);
 
   let { id } = useParams();
   const [loading, setLoading] = useState(false);
-  const [product, setProduct] = useState({
-    image:'',
-    title:'',
-    price:'',
-    quantity:1,
-    description:'',
-  });
+  const [product, setProduct] = useState({});
+  const [quantity, setQuantity] = useState(1);
   useEffect(() => {
     let isSubscribed = true;
     async function getProduct() {
       const res = await ApiService(endpoint.products + "/" + id);
-      console.log(res);
       if (isSubscribed && res) {
+        const findCart = cart.find((item) => item.id === res.data.id);
+        
         setProduct(res.data);
         setLoading(true);
         window.scrollTo(0, 0);
       } else {
-        history.push('/404')
+        history.push("/404");
       }
     }
     getProduct();
     return () => (isSubscribed = false);
-  }, [history, id]);
-
+  }, [cart, history, id, quantity]);
+  const handleChangeQuantity = (e) => {
+    setQuantity(+e.target.value);
+  };
   return !loading ? (
     <main>
       <Loading />
@@ -53,10 +45,10 @@ const Detail = () => {
           <div className="col-lg-8">
             <div className="product-detail-top">
               <div className="row align-items-center">
-                <div className="col-md-5">
+                <div className="col-md-6">
                   <img src={product.image} className="w_100" alt="Product" />
                 </div>
-                <div className="col-md-7">
+                <div className="col-md-6">
                   <div className="product-content">
                     <div className="title">
                       <h2>{product.title}</h2>
@@ -80,7 +72,8 @@ const Detail = () => {
                         </button>
                         <input
                           type="text"
-                          value={product.quantity ? product.quantity : 1}
+                          value={quantity}
+                          onChange={handleChangeQuantity}
                         />
                         <button className="btn-plus">
                           <i className="fa fa-plus" />
@@ -118,18 +111,8 @@ const Detail = () => {
                         </button>
                       </div>
                     </div>
-                    <div className="action">
-                      <button
-                        onClick={() => addToCart(product)}
-                        className="btn"
-                      >
-                        <i className="fa fa-shopping-cart" />
-                        Add to Cart
-                      </button>
-                      <a className="btn" href="/#">
-                        <i className="fa fa-shopping-bag" />
-                        Buy Now
-                      </a>
+                    <div className="action text-center">
+                      <AddCart product={product} />
                     </div>
                   </div>
                 </div>
@@ -263,121 +246,7 @@ const Detail = () => {
                 </ul>
               </nav>
             </div>
-            <div className="sidebar-widget widget-slider">
-              <div className="sidebar-slider normal-slider">
-                <div className="product-item">
-                  <div className="product-title">
-                    <a href="/#">Product Name</a>
-                    <div className="ratting">
-                      <i className="fa fa-star" />
-                      <i className="fa fa-star" />
-                      <i className="fa fa-star" />
-                      <i className="fa fa-star" />
-                      <i className="fa fa-star" />
-                    </div>
-                  </div>
-                  <div className="product">
-                    <a href="product-detail.html">
-                      <img src="img/product-7.jpg" alt="Product" />
-                    </a>
-                    <div className="product-action">
-                      <a href="/#">
-                        <i className="fa fa-cart-plus" />
-                      </a>
-                      <a href="/#">
-                        <i className="fa fa-heart" />
-                      </a>
-                      <a href="/#">
-                        <i className="fa fa-search" />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="product-price">
-                    <h3>
-                      <span>$</span>99
-                    </h3>
-                    <a className="btn" href>
-                      <i className="fa fa-shopping-cart" />
-                      Buy Now
-                    </a>
-                  </div>
-                </div>
-                <div className="product-item">
-                  <div className="product-title">
-                    <a href="/#">Product Name</a>
-                    <div className="ratting">
-                      <i className="fa fa-star" />
-                      <i className="fa fa-star" />
-                      <i className="fa fa-star" />
-                      <i className="fa fa-star" />
-                      <i className="fa fa-star" />
-                    </div>
-                  </div>
-                  <div className="product">
-                    <a href="product-detail.html">
-                      <img src="img/product-8.jpg" alt="Product" />
-                    </a>
-                    <div className="product-action">
-                      <a href="/#">
-                        <i className="fa fa-cart-plus" />
-                      </a>
-                      <a href="/#">
-                        <i className="fa fa-heart" />
-                      </a>
-                      <a href="/#">
-                        <i className="fa fa-search" />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="product-price">
-                    <h3>
-                      <span>$</span>99
-                    </h3>
-                    <a className="btn" href>
-                      <i className="fa fa-shopping-cart" />
-                      Buy Now
-                    </a>
-                  </div>
-                </div>
-                <div className="product-item">
-                  <div className="product-title">
-                    <a href="/#">Product Name</a>
-                    <div className="ratting">
-                      <i className="fa fa-star" />
-                      <i className="fa fa-star" />
-                      <i className="fa fa-star" />
-                      <i className="fa fa-star" />
-                      <i className="fa fa-star" />
-                    </div>
-                  </div>
-                  <div className="product">
-                    <a href="product-detail.html">
-                      <img src="img/product-9.jpg" alt="Product" />
-                    </a>
-                    <div className="product-action">
-                      <a href="/#">
-                        <i className="fa fa-cart-plus" />
-                      </a>
-                      <a href="/#">
-                        <i className="fa fa-heart" />
-                      </a>
-                      <a href="/#">
-                        <i className="fa fa-search" />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="product-price">
-                    <h3>
-                      <span>$</span>99
-                    </h3>
-                    <a className="btn" href>
-                      <i className="fa fa-shopping-cart" />
-                      Buy Now
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+
             <div className="sidebar-widget brands">
               <h2 className="title">Our Brands</h2>
               <ul>

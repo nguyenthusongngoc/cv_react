@@ -70,7 +70,6 @@ const SlideProduct = () => {
           className="row align-items-center product-slider product-slider-4"
         >
           {product ? (
-            product &&
             product.map((item, index) => (
               <ProductItem product={item} key={index} />
             ))

@@ -7,6 +7,7 @@ import ApiService, {
   createParam,
   endpoint,
 } from "../../../../core/service/api";
+import Loading from "../../../layouts/Loading/Loading";
 const Recent = () => {
   const [product, setProduct] = useState();
   let query = {
@@ -22,9 +23,7 @@ const Recent = () => {
       }
     }
     getProduct();
-    return () => (
-      isSubscribed = false
-    )
+    return () => (isSubscribed = false);
   }, []);
   const settings = {
     autoplay: true,
@@ -69,7 +68,7 @@ const Recent = () => {
           {...settings}
           className="row align-items-center product-slider product-slider-4"
         >
-          {product &&
+          {product ? (
             product.map((item, index) => (
               <div className="product-item" key={index}>
                 <div className="product-title">
@@ -109,7 +108,10 @@ const Recent = () => {
                   </a>
                 </div>
               </div>
-            ))}
+            ))
+          ) : (
+            <Loading />
+          )}
         </Slider>
       </div>
     </div>
