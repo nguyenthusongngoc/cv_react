@@ -1,17 +1,7 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React from "react";
-import { useDispatch } from "react-redux";
-import { addCart } from "../../../redux/cartReducer";
+import AddToCart from "../AddToCart/AddToCart";
 const ProductItem = (props) => {
-  const dispatch = useDispatch();
-
-  const addToCart = (item) => {
-    const quantity = item.quantity ? item.quantity : 1;
-    const newItem = { ...item, quantity: quantity };
-    const action = addCart(newItem);
-    dispatch(action);
-  };
-
   const { product } = props;
   return (
     <div>
@@ -44,15 +34,7 @@ const ProductItem = (props) => {
             <span>$</span>
             {product.price}
           </h3>
-          <button
-            className="btn"
-            onClick={() => {
-              addToCart(product);
-            }}
-          >
-            <i className="fa fa-shopping-cart" />
-            Buy Now
-          </button>
+          <AddToCart product={product}/>
         </div>
       </div>
     </div>

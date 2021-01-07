@@ -10,7 +10,7 @@ const CartList = (props) => {
   }
   return (
     <tbody className="align-middle">
-      {!cartList.length > 0 && (
+      {cartList.length < 0 && (
         <tr className="text-center">
           <td style={{ height: "300px" }} colSpan={6}>
             You haven't any product in cart.

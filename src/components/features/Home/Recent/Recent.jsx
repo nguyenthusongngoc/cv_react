@@ -7,6 +7,8 @@ import ApiService, {
   createParam,
   endpoint,
 } from "../../../../core/service/api";
+import ProductItem from "../../../common/ProductItem/ProductItem";
+import Loading from "../../../layouts/Loading/Loading";
 const Recent = () => {
   const [product, setProduct] = useState();
   let query = {
@@ -22,9 +24,7 @@ const Recent = () => {
       }
     }
     getProduct();
-    return () => (
-      isSubscribed = false
-    )
+    return () => (isSubscribed = false);
   }, []);
   const settings = {
     autoplay: true,
@@ -69,47 +69,14 @@ const Recent = () => {
           {...settings}
           className="row align-items-center product-slider product-slider-4"
         >
-          {product &&
+          {product ? (
+            product &&
             product.map((item, index) => (
-              <div className="product-item" key={index}>
-                <div className="product-title">
-                  <a href="/#">{item.title}</a>
-                  <div className="ratting">
-                    <i className="fa fa-star" />
-                    <i className="fa fa-star" />
-                    <i className="fa fa-star" />
-                    <i className="fa fa-star" />
-                    <i className="fa fa-star" />
-                  </div>
-                </div>
-                <div className="product-image">
-                  <a href="product-detail.html">
-                    <img src={item.image} alt="Product Image" />
-                  </a>
-                  <div className="product-action">
-                    <a href="/#">
-                      <i className="fa fa-cart-plus" />
-                    </a>
-                    <a href="/#">
-                      <i className="fa fa-heart" />
-                    </a>
-                    <a href="/#">
-                      <i className="fa fa-search" />
-                    </a>
-                  </div>
-                </div>
-                <div className="product-price">
-                  <h3>
-                    <span>$</span>
-                    {item.price}
-                  </h3>
-                  <a className="btn" href>
-                    <i className="fa fa-shopping-cart" />
-                    Buy Now
-                  </a>
-                </div>
-              </div>
-            ))}
+              <ProductItem product={item} key={index} />
+            ))
+          ) : (
+            <Loading />
+          )}
         </Slider>
       </div>
     </div>
